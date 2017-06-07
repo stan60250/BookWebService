@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	
+	<!-- BookModel -->
+	<bean id="bookModel" class="restfulWS.book.model.BookModel" scope="prototype" />
+	
+	<!-- BookService -->
+	<bean id="book_service" class="java.lang.String">
+		<!-- <constructor-arg type="String" value="http://localhost:8080/13_MemberWS/spring/webservice/book" /> -->
+		<constructor-arg type="String" value="http://ilab.csie.ntut.edu.tw:8080/13_MemberWS/spring/webservice/book" />
+	</bean>
+	
+	<!-- AuthService -->
+	<bean id="auth_service" class="java.lang.String">
+		<!-- <constructor-arg type="String" value="http://localhost:8080/13_MemberWS/spring/webservice/auth" /> -->
+		<constructor-arg type="String" value="http://ilab.csie.ntut.edu.tw:8080/13_MemberWS/spring/webservice/auth" />
+	</bean>
+	
+	<!-- 認證Email網址 -->
+	<bean id="emailConfirmAddress" class="java.lang.String">
+		<!-- <constructor-arg type="String" value="http://localhost:8080/13_MemberWS/spring/webservice/emailConfirm?token=" /> -->
+		<constructor-arg type="String" value="http://ilab.csie.ntut.edu.tw:8080/13_MemberWS/spring/webservice/emailConfirm?token=" />
+    </bean>
+	
+	<!-- 錯誤 -->
+	<bean id="ERROR" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/error"/>
+    </bean>
+    
+    <!-- 訊息 -->
+    <bean id="messageModel" class="restfulWS.book.viewmodel.MessageModel" />
+    
+    <!-- 會員 -->
+    <bean id="memberModel" class="restfulWS.auth.model.MemberModel" />
+    
+    <!-- 資訊 -->
+    <bean id="infoModel" class="restfulWS.book.viewmodel.InfoModel" />
+    
+    <!-- 搜尋 -->
+    <bean id="bookQueryModel" class="restfulWS.book.viewmodel.BookQueryModel" />
+    
+    <!-- 書架框架 -->
+    <bean id="bookListModel" class="restfulWS.book.viewmodel.BookListModel" />
+    <!-- 公共書架 -->
+	<bean id="listPublicSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/listPublic"/>
+    </bean>
+    <!-- 個人書架 -->
+    <bean id="listPrivateSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/listPrivate"/>
+    </bean>
+    
+    <!-- 帳號登入連結 -->
+    <bean id="userLogin" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/userLogin"/>
+    </bean>
+    <!-- 帳號登入結果 -->
+    <bean id="userLoginSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 帳號建立連結 -->
+    <bean id="userCreate" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/userCreate"/>
+    </bean>
+    <!-- 帳號建立結果 -->
+    <bean id="userCreateSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 帳號資料修改連結 -->
+    <bean id="userModify" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/userModify"/>
+    </bean>
+    <!-- 帳號資料修改結果 -->
+    <bean id="userModifySUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 帳號資訊連結 -->
+    <bean id="userInfo" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/userInfo"/>
+    </bean>
+    
+    <!-- 帳號登出結果 -->
+    <bean id="userLogoutSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 郵件認證結果 -->
+    <bean id="emailConfirmSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 書籍上架連結 -->
+    <bean id="bookCreate" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/bookCreate"/>
+    </bean>
+    <!-- 書籍上架結果 -->
+    <bean id="bookCreateSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 書籍下架連結 -->
+    <bean id="bookDelete" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/bookDelete"/>
+    </bean>
+    <!-- 書籍下架結果 -->
+    <bean id="bookDeleteSUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 書籍搜尋連結 -->
+    <bean id="bookQuery" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/bookQuery"/>
+    </bean>
+    <!-- 書籍搜尋結果 -->
+    <bean id="bookQuerySUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/listPublic"/>
+    </bean>
+    
+    <!-- 書籍閱讀連結 -->
+    <bean id="bookView" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/bookView"/>
+    </bean>
+    
+    <!-- 書籍付費連結 -->
+    <bean id="bookPay" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/bookPay"/>
+    </bean>
+    <!-- 書籍付費結果 -->
+    <bean id="bookPaySUCCESS" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 訊息提示 -->
+    <bean id="MSG" class="java.lang.String">
+		<constructor-arg type="String" value="spring/webservice/msg"/>
+    </bean>
+    
+    <!-- 以上已修改 -->
+    
+</beans>

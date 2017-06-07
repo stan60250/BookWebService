@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+  "http://www.hibernate.org/dtd/hibernate-mapping.dtd">
+
+<hibernate-mapping>
+
+	<class name="restfulWS.fee.model.FeeModel" table="Fee">
+		<!-- 使用資料庫自建之主鍵值  -->
+		<id name="id" column="id" type="integer">
+			<generator class="native" />
+		</id>
+
+		<property name="name" column="name" type="string" not-null="true"
+			length="50" />
+
+		<property name="count" column="count" type="integer"
+			not-null="true" length="10" />
+
+	</class>
+
+</hibernate-mapping>

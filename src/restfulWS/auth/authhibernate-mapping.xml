@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+  "http://www.hibernate.org/dtd/hibernate-mapping.dtd">
+
+<hibernate-mapping>
+	
+	<class name="restfulWS.auth.model.MemberModel" table="WS_member">
+		<id name="id" column="id" type="integer">
+			<generator class="native" />
+		</id>
+		<property name="userID" column="userID" type="string" not-null="true" length="16" />
+		<property name="userPWHash" column="userPWHash" type="string" not-null="true" length="64" />
+		<property name="userName" column="userName" type="string" not-null="true" length="50" />
+		<property name="userEmail" column="userEmail" type="text" not-null="true" />
+		<property name="enable" column="enable" type="integer" not-null="true" />
+	</class>
+	
+	<class name="restfulWS.auth.model.AuthModel" table="WS_auth">
+		<id name="id" column="id" type="integer">
+			<generator class="native" />
+		</id>
+		<property name="userID" column="userID" type="string" not-null="true" length="16" />
+		<property name="requestTime" column="requestTime" type="string" not-null="true" length="50"/>
+		<property name="accessToken" column="accessToken" type="string" not-null="true" length="64" />
+	</class>
+	
+	<class name="restfulWS.auth.model.EmailModel" table="WS_email">
+		<id name="id" column="id" type="integer">
+			<generator class="native" />
+		</id>
+		<property name="userID" column="userID" type="string" not-null="true" length="16" />
+		<property name="requestTime" column="requestTime" type="string" not-null="true" length="50"/>
+		<property name="accessToken" column="accessToken" type="string" not-null="true" length="64" />
+	</class>
+	
+</hibernate-mapping>
